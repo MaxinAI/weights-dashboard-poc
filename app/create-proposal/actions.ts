@@ -2,9 +2,9 @@
 
 import { createPullRequest } from "@/app/utils";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function submitProposal(formData: FormData) {
-  "use server";
   try {
     await createPullRequest({
       newFileContent: formData.get("description") as string,
@@ -15,5 +15,7 @@ export async function submitProposal(formData: FormData) {
     revalidatePath("/");
   } catch (e) {
     console.log(e);
+  } finally {
+    redirect("/");
   }
 }
