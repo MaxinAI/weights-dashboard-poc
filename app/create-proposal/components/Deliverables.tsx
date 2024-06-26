@@ -10,6 +10,10 @@ export default function Deliverables() {
     setNumberOfDeliverables((prev) => prev + 1);
   };
 
+  const removeDeliverable = () => {
+    setNumberOfDeliverables((prev) => prev - 1);
+  };
+
   return (
     <div className="w-full">
       {Array.from({ length: numberOfDeliverables }).map((_, index) => (
@@ -19,6 +23,8 @@ export default function Deliverables() {
             title={`Deliverable ${index + 1}`}
             desc="Deliverable should include its description, success criteria, time to complete, and any other relevant information."
             placeholder="Describe the deliverable here..."
+            removable={index > 0 && index === numberOfDeliverables - 1}
+            onClick={removeDeliverable}
           />
         </div>
       ))}
