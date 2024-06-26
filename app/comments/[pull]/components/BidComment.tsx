@@ -44,7 +44,7 @@ export default function BidComment({
           name="days"
           id="days"
           className="border border-neutral-800 p-3 bg-black rounded focus:outline-none focus:border-[#179c65]"
-          placeholder="Number of days"
+          placeholder="Number of snapshots"
           required
         />
       </div>
