@@ -8,7 +8,7 @@ export default function Welcome() {
 
       {/* Title */}
       <div className="flex flex-col items-center mb-5">
-        <h1 className="text-4xl">Weights Dashboard</h1>
+        <h1 className="text-4xl">MOR.Software</h1>
         <p className="text-sm italic mt-3">Open Source For The Win</p>
       </div>
 
