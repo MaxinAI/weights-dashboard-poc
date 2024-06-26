@@ -13,10 +13,12 @@ export default function MarkdownField({
   id,
   title,
   desc,
+  placeholder,
 }: {
   id: string;
   title: string;
   desc: string;
+  placeholder: string;
 }) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -35,7 +37,7 @@ export default function MarkdownField({
       <SimpleMDE
         onChange={handleEditorChange}
         options={{
-          placeholder: "Content",
+          placeholder: placeholder,
           spellChecker: false,
           hideIcons: ["fullscreen", "side-by-side"],
         }}

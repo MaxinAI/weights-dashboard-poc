@@ -17,7 +17,8 @@ export default function Deliverables() {
           <MarkdownField
             id={`deliverable-${index}`}
             title={`Deliverable ${index + 1}`}
-            desc="Describe the deliverable"
+            desc="Deliverable should include its description, success criteria, time to complete, and any other relevant information."
+            placeholder="Describe the deliverable here..."
           />
         </div>
       ))}

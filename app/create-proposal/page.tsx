@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/app/components";
 import { submitProposal } from "./actions";
@@ -40,7 +42,7 @@ export default function CreateProposal() {
         {/* Select an option */}
         <div className="flex flex-col mt-5">
           <label htmlFor="mri">
-            MRI Number{" "}
+            MRI Number
             <p className="text-sm text-gray-400 my-0.5 mb-2">
               To which MRI does this contribution belong?
             </p>
@@ -84,6 +86,7 @@ export default function CreateProposal() {
           id="description"
           title="Description"
           desc="Details of MRC in markdown format"
+          placeholder="Describe the MRC here..."
         />
 
         <Deliverables />
